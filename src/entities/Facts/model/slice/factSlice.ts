@@ -20,7 +20,7 @@ export const FactSlice = createSlice({
             })
             .addCase(FactService.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.result = action.payload.result;
+                state.result = action.payload;
             })
             .addCase(FactService.rejected, (state, action) => {
                 state.isLoading = false;
