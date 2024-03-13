@@ -1,7 +1,7 @@
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
 
-const baseUrl = 'https://api.agify.io/';
+const baseUrl = 'https://api.agify.io/?name=';
 export const $nameapi = axios.create({
     baseURL: baseUrl,
 });

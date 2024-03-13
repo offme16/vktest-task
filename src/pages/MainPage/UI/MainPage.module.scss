@@ -1,8 +1,21 @@
 .MainPage {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
+    gap: 100px;
+    .MainPage_factbox_input {
+      width: 400px;
+    }
+    .GroupFact{
+      display: flex;
+      gap: 10px;
+    }
+    .GroupName{
+      display: flex;
+      gap: 10px;
+    }
   }
