@@ -1,7 +1,7 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema } from './stateShema';
 import { FactReducer } from 'entities/Facts';
-import { AgeReducer } from 'entities/Age/model/slice/AgeSlice';
+import { AgeReducer } from 'entities/Age';
 
 export function createRootStore(initialState?: StateSchema) {
     const rootReducer: ReducersMapObject<StateSchema> = {

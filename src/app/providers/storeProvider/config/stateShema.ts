@@ -1,4 +1,4 @@
-import { AgeSchema } from "entities/Age/model/type/AgeShema";
+import { AgeSchema } from "entities/Age";
 import { FactSchema } from "entities/Facts";
 
 

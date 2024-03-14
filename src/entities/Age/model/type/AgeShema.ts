@@ -1,5 +1,11 @@
+interface Person {
+    count: number;
+    name: string;
+    age: number;
+}
+
 export interface AgeSchema {
-    result?: number;
+    person?: Person;
     isLoading: boolean;
     error?: string;
     name?: string;

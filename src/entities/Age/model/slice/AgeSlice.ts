@@ -4,7 +4,7 @@ import { AgeSchema } from '../type/AgeShema';
 
 
 const initialState: AgeSchema = {
-    result: undefined,
+    person: undefined,
     error: undefined,
     isLoading: false,
     name: undefined,
@@ -15,7 +15,7 @@ export const AgeSlice = createSlice({
     initialState,
     reducers: { 
         setName( state, action){
-            state.name = action.payload;
+            state.name = action.payload.value;
         }
     },
     extraReducers: (builder) => {
@@ -26,7 +26,7 @@ export const AgeSlice = createSlice({
             })
             .addCase(AgeService.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.result = action.payload;
+                state.person = action.payload;
             })
             .addCase(AgeService.rejected, (state, action) => {
                 state.isLoading = false;

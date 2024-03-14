@@ -2,9 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AxiosError } from 'axios';
 import { $nameapi } from 'shared/api/NameApi';
 
-interface NameProps {
-    name: string;
-}
 
 interface KnownError {
     message: string;
@@ -13,12 +10,10 @@ interface KnownError {
 }
 
 export const AgeService = createAsyncThunk(
-    'get_facts',
-    async (name: NameProps, thunkAPI) => {
+    'get_age',
+    async (name: string, thunkAPI) => {
         try {
-            console.log(name);
-        
-            const response = await $nameapi.get(`${name}`);
+            const response = await $nameapi.get(`?name=${name}`);
             if (!response.data) {
                 throw new Error();
             }
