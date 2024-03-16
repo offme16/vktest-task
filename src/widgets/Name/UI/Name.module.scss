@@ -1,4 +1,13 @@
 .GroupName{
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+
+    .GroupName_box {
+      display: flex;
+      gap: 10px;
+    }
+
+    em{
+      color: red;
+    }
   }

@@ -29,14 +29,20 @@ const Name = () => {
     }
     return (
         <div className={cls.GroupName}>
-            <Input
-                className={cls.MainPage_factbox_input}
-                type="text"
-                placeholder="Напиши имя"
-                onChange={(e) => handleField(e.target.value)}
-            />
-            <div>{age}</div>
+          <div className={cls.GroupName_box}>
+          <Input
+            {...register("Name", { required: true, pattern: /^[A-Za-z]+$/i })}
+            className={cls.MainPage_factbox_input}
+            type="text"
+            placeholder="Напиши имя"
+            onChange={(e) => handleField(e.target.value)}
+/>
             <Button onClick={() => name && getAgew(name)} size={'l'}>click</Button>
+          </div>
+            <div>Возраст: {age}</div>
+            <div className={cls.error}>
+            {errors?.Name && <em>Заполните поле</em>}
+            </div>
             </div>
     )
 }
